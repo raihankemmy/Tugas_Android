@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9199a1"
+    tools:context=".FormulirPendaftaran">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_nama"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/button_formulirpendaftaran"
+                android:hint="Masukkan Nama"
+                android:textColorHint="#ccb7b6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_tampilandata" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_nim"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/button_formulirpendaftaran"
+                android:hint="Masukkan NIM"
+                android:textColorHint="#ccb7b6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_nama" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_jurusan"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/button_formulirpendaftaran"
+                android:hint="Masukkan Jurusan"
+                android:textColorHint="#ccb7b6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_nim" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_alamat"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/button_formulirpendaftaran"
+                android:hint="Masukkan Alamat"
+                android:textColorHint="#ccb7b6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio_group_jeniskelamin" />
+
+            <TextView
+                android:id="@+id/text_view_tampilandata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Formulir Pendaftaran"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_backformulir"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:background="#e4f2ef"
+                android:text="BACK"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_tanggal" />
+
+            <Button
+                android:id="@+id/button_saveformulir"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="40dp"
+                android:background="#e4f2ef"
+                android:text="SAVE"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_tahun" />
+
+            <TextView
+                android:id="@+id/text_view_jeniskelamin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:text="JENIS KELAMIN"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_jurusan" />
+
+            <RadioGroup
+                android:id="@+id/radio_group_jeniskelamin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_jurusan">
+
+                <RadioButton
+                    android:id="@+id/radio_button_perempuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_formulirpendaftaran"
+                    android:padding="0dp"
+                    android:paddingEnd="10dp"
+                    android:text="Perempuan" />
+
+                <RadioButton
+                    android:id="@+id/radio_button_lakilaki"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:background="@drawable/button_formulirpendaftaran"
+                    android:padding="0dp"
+                    android:paddingEnd="10dp"
+                    android:text="Laki - Laki" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/text_view_alamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:text="ALAMAT"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio_group_jeniskelamin" />
+
+            <TextView
+                android:id="@+id/text_view_tanggallahir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:text="TANGGAL LAHIR"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_alamat" />
+
+            <TextView
+                android:id="@+id/text_view_nama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="44dp"
+                android:text="NAMA"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_tampilandata" />
+
+            <TextView
+                android:id="@+id/text_view_jurusan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:text="JURUSAN"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_nim" />
+
+            <TextView
+                android:id="@+id/text_view_nim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                android:text="NIM"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_nama" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_bulan"
+                android:layout_width="105dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/button_formulirpendaftaran"
+                android:hint="Bulan"
+                android:textColorHint="#ccb7b6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/text_input_tahun"
+                app:layout_constraintStart_toEndOf="@+id/text_input_tanggal"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_alamat" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_tahun"
+                android:layout_width="105dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/button_formulirpendaftaran"
+                android:hint="Tahun"
+                android:textColorHint="#ccb7b6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/text_input_bulan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_alamat" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_tanggal"
+                android:layout_width="105dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/button_formulirpendaftaran"
+                android:hint="Tanggal"
+                android:textColorHint="#ccb7b6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.007"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_input_alamat" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
